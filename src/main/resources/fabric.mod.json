@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "magicsquared",
+  "version": "${version}",
+
+  "name": "Magic²",
+  "description": "x equals crystals times something unnatural squared",
+  "authors": [
+    "OliW3r"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/magicsquared/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "magicsquared.Main"
+    ]
+  },
+  
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
