@@ -1,5 +1,6 @@
 package magicsquared;
 
+import magicsquared.init.items.RegisterItems;
 import net.fabricmc.api.ModInitializer;
 
 public class Main implements ModInitializer {
@@ -11,5 +12,6 @@ public class Main implements ModInitializer {
 		// Proceed with mild caution.
 
 		util.LOGGER.debug("MagicSquared Main initiated");
+		new RegisterItems();
 	}
 }
