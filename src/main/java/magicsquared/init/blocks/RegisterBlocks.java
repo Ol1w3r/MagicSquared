@@ -1,8 +1,11 @@
 package magicsquared.init.blocks;
 
 import magicsquared.util;
+import magicsquared.init.ItemGroups;
 import magicsquared.init.items.GemItem.GEM_TYPES;
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -30,5 +33,6 @@ public class RegisterBlocks {
 	private void registerBlock(Block block, String name) {
 		util.LOGGER.debug("Registered: " + name);
 		Registry.register(Registry.BLOCK, new Identifier(util.MODID, name), block);
+		Registry.register(Registry.ITEM, new Identifier(util.MODID, name), new BlockItem(block, new Item.Settings().group(ItemGroups.GENERAL)));
 	}
 }

@@ -5,6 +5,13 @@
   "item.magicsquared.item_phosphophyllite": "Phosphophyllite",  
   "item.magicsquared.item_ruby": "Ruby",
   "item.magicsquared.item_sapphire": "Sapphire",
+  
+  "block.magicsquared.block_amethyst": "Block of Amethyst",
+  "block.magicsquared.block_azurite": "Block of Azurite",
+  "block.magicsquared.block_peridot": "Block of Peridot",
+  "block.magicsquared.block_phosphophyllite": "Block of Phosphophyllite",
+  "block.magicsquared.block_ruby": "Block of Ruby",
+  "block.magicsquared.block_sapphire": "Block of Sapphire",
 
   "itemGroup.magicsquared.general": "Magic Squared"
 }

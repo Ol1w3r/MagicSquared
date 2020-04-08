@@ -1,6 +1,6 @@
 package magicsquared.init.items;
 
-import magicsquared.init.ModItemGroups;
+import magicsquared.init.ItemGroups;
 import net.minecraft.item.Item;
 
 public class GemItem extends Item {
@@ -9,7 +9,7 @@ public class GemItem extends Item {
 	
 	public GemItem(GEM_TYPES type) {
 		
-		super(new Item.Settings().group(ModItemGroups.MOD_ITEM_GROUP));
+		super(new Item.Settings().group(ItemGroups.GENERAL));
 		
 		this.type = type;
 	}
