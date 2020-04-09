@@ -1,20 +1,27 @@
 package magicsquared.init.blocks;
 
-import magicsquared.init.items.GemItem.GEM_TYPES;
+import magicsquared.interfaces.IGem;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 
-public class GemBlock extends Block {
+public class GemBlock extends Block implements IGem {
+	
+	private GEM_TYPES type;
 	
 	public GemBlock(GEM_TYPES type) {
 		super(getSettingsFromType(type));
+		this.type = type;
 	}
-	
+
+	@Override
+	public GEM_TYPES getType() {
+		return type;
+	}
 	public static Settings getSettingsFromType(GEM_TYPES type) {
 		
-		FabricBlockSettings settings = FabricBlockSettings.of(Material.METAL).breakByHand(false);
+		FabricBlockSettings settings = FabricBlockSettings.copy(Blocks.DIAMOND_BLOCK);
 		
 		switch(type) {
 		
@@ -25,10 +32,11 @@ public class GemBlock extends Block {
 		case RUBY:
 		case SAPPHIRE:
 		default:
-			settings.strength(1, 1).breakByTool(FabricToolTags.PICKAXES);
+			settings.strength(5, 6).breakByTool(FabricToolTags.PICKAXES, 3);
 		}
 		
 		return settings.build();
 	}
+
 
 }

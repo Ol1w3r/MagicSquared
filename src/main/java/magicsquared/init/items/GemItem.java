@@ -1,9 +1,10 @@
 package magicsquared.init.items;
 
 import magicsquared.init.ItemGroups;
+import magicsquared.interfaces.IGem;
 import net.minecraft.item.Item;
 
-public class GemItem extends Item {
+public class GemItem extends Item implements IGem {
 
 	private GEM_TYPES type;
 	
@@ -13,15 +14,9 @@ public class GemItem extends Item {
 		
 		this.type = type;
 	}
-	
-	public GEM_TYPES getType() { return this.type; }
-	
-	public enum GEM_TYPES {
-		AMETHYST,
-		AZURITE,
-		PERIDOT,
-		PHOSPHOPHYLLITE,
-		RUBY,
-		SAPPHIRE,
+
+	@Override
+	public GEM_TYPES getType() {
+		return type;
 	}
 }

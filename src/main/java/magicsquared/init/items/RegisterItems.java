@@ -1,33 +1,133 @@
 package magicsquared.init.items;
 
 import magicsquared.util;
-import magicsquared.init.items.GemItem.GEM_TYPES;
+import magicsquared.init.ToolMaterials.MaterialGem;
+import magicsquared.init.items.tools.AxeBase;
+import magicsquared.init.items.tools.PickaxeBase;
+import magicsquared.init.items.tools.ShovelBase;
+import magicsquared.init.items.tools.SwordBase;
+import magicsquared.interfaces.IGem;
+import magicsquared.interfaces.IGem.GEM_TYPES;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class RegisterItems {
 
-	public static final Item ITEM_AMETHYST 			= new GemItem(GEM_TYPES.AMETHYST);
-	public static final Item ITEM_AZURITE 			= new GemItem(GEM_TYPES.AZURITE);
-	public static final Item ITEM_PERIDOT 			= new GemItem(GEM_TYPES.PERIDOT);
-	public static final Item ITEM_PHOSPHOPHYLLITE 	= new GemItem(GEM_TYPES.PHOSPHOPHYLLITE);
-	public static final Item ITEM_RUBY 				= new GemItem(GEM_TYPES.RUBY);
-	public static final Item ITEM_SAPPHIRE 			= new GemItem(GEM_TYPES.SAPPHIRE);
+	public static final GemItem ITEM_AMETHYST 			= new GemItem(GEM_TYPES.AMETHYST);
+	public static final GemItem ITEM_AZURITE 			= new GemItem(GEM_TYPES.AZURITE);
+	public static final GemItem ITEM_PERIDOT 			= new GemItem(GEM_TYPES.PERIDOT);
+	public static final GemItem ITEM_PHOSPHOPHYLLITE 	= new GemItem(GEM_TYPES.PHOSPHOPHYLLITE);
+	public static final GemItem ITEM_RUBY 				= new GemItem(GEM_TYPES.RUBY);
+	public static final GemItem ITEM_SAPPHIRE 			= new GemItem(GEM_TYPES.SAPPHIRE);
 	
-	public RegisterItems() {
+	public static final ToolItem ITEM_AMETHYST_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.AMETHYST));
+	public static final ToolItem ITEM_AMETHYST_AXE = new AxeBase(new MaterialGem(GEM_TYPES.AMETHYST));
+	public static final ToolItem ITEM_AMETHYST_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.AMETHYST));
+	public static final ToolItem ITEM_AMETHYST_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.AMETHYST));
+
+	public static final ToolItem ITEM_AZURITE_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.AZURITE));
+	public static final ToolItem ITEM_AZURITE_AXE = new AxeBase(new MaterialGem(GEM_TYPES.AZURITE));
+	public static final ToolItem ITEM_AZURITE_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.AZURITE));
+	public static final ToolItem ITEM_AZURITE_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.AZURITE));
+	
+	public static final ToolItem ITEM_PERIDOT_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.PERIDOT));
+	public static final ToolItem ITEM_PERIDOT_AXE = new AxeBase(new MaterialGem(GEM_TYPES.PERIDOT));
+	public static final ToolItem ITEM_PERIDOT_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.PERIDOT));
+	public static final ToolItem ITEM_PERIDOT_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.PERIDOT));
+	
+	public static final ToolItem ITEM_PHOSPHOPHYLLITE_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.PHOSPHOPHYLLITE));
+	public static final ToolItem ITEM_PHOSPHOPHYLLITE_AXE = new AxeBase(new MaterialGem(GEM_TYPES.PHOSPHOPHYLLITE));
+	public static final ToolItem ITEM_PHOSPHOPHYLLITE_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.PHOSPHOPHYLLITE));
+	public static final ToolItem ITEM_PHOSPHOPHYLLITE_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.PHOSPHOPHYLLITE));
+
+	public static final ToolItem ITEM_RUBY_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.RUBY));
+	public static final ToolItem ITEM_RUBY_AXE = new AxeBase(new MaterialGem(GEM_TYPES.RUBY));
+	public static final ToolItem ITEM_RUBY_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.RUBY));
+	public static final ToolItem ITEM_RUBY_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.RUBY));
+
+	public static final ToolItem ITEM_SAPPHIRE_PICKAXE = new PickaxeBase(new MaterialGem(GEM_TYPES.SAPPHIRE));
+	public static final ToolItem ITEM_SAPPHIRE_AXE = new AxeBase(new MaterialGem(GEM_TYPES.SAPPHIRE));
+	public static final ToolItem ITEM_SAPPHIRE_SHOVEL = new ShovelBase(new MaterialGem(GEM_TYPES.SAPPHIRE));
+	public static final ToolItem ITEM_SAPPHIRE_SWORD = new SwordBase(new MaterialGem(GEM_TYPES.SAPPHIRE));
+	
+	private GemItem[] gemItems = new GemItem[] {
+			
+			ITEM_AMETHYST, 
+			ITEM_AZURITE, 
+			ITEM_PERIDOT, 
+			ITEM_PHOSPHOPHYLLITE, 
+			ITEM_RUBY, 
+			ITEM_SAPPHIRE
+	};
+	private ToolItem[] pickaxes = new ToolItem[] {
+			ITEM_AMETHYST_PICKAXE,
+			ITEM_AZURITE_PICKAXE,
+			ITEM_PERIDOT_PICKAXE,
+			ITEM_PHOSPHOPHYLLITE_PICKAXE,
+			ITEM_RUBY_PICKAXE,
+			ITEM_SAPPHIRE_PICKAXE
+	};
+	private ToolItem[] axes = new ToolItem[] {
+			ITEM_AMETHYST_AXE,
+			ITEM_AZURITE_AXE,
+			ITEM_PERIDOT_AXE,
+			ITEM_PHOSPHOPHYLLITE_AXE,
+			ITEM_RUBY_AXE,
+			ITEM_SAPPHIRE_AXE
+	};
+	private ToolItem[] shovels = new ToolItem[] {
+			ITEM_AMETHYST_SHOVEL,
+			ITEM_AZURITE_SHOVEL,
+			ITEM_PERIDOT_SHOVEL,
+			ITEM_PHOSPHOPHYLLITE_SHOVEL,
+			ITEM_RUBY_SHOVEL,
+			ITEM_SAPPHIRE_SHOVEL
+	};
+	private ToolItem[] swords = new ToolItem[] {
+			ITEM_AMETHYST_SWORD,
+			ITEM_AZURITE_SWORD,
+			ITEM_PERIDOT_SWORD,
+			ITEM_PHOSPHOPHYLLITE_SWORD,
+			ITEM_RUBY_SWORD,
+			ITEM_SAPPHIRE_SWORD
+	};
+	
+public RegisterItems() { 
+		
+		String prefix = "item_";
 		
 		util.LOGGER.debug("START REGISTER ITEMS");
-		registerItem(ITEM_AMETHYST, 		"item_amethyst");
-		registerItem(ITEM_AZURITE, 			"item_azurite");
-		registerItem(ITEM_PERIDOT, 			"item_peridot");
-		registerItem(ITEM_PHOSPHOPHYLLITE, 	"item_phosphophyllite");
-		registerItem(ITEM_RUBY, 			"item_ruby");
-		registerItem(ITEM_SAPPHIRE, 		"item_sapphire");
+		
+		for(GemItem item: gemItems) {
+			registerItem(item, prefix + item.getType().getName());
+		}
+		for(ToolItem item: pickaxes) {
+			registerTool(item, "_pickaxe");
+		}
+		for(ToolItem item: axes) {
+			registerTool(item, "_axe");
+		}
+		for(ToolItem item: shovels) {
+			registerTool(item, "_shovel");
+		}
+		for(ToolItem item: swords) {
+			registerTool(item, "_sword");
+		}
 	}
 	
 	private void registerItem(Item item, String name) {
 		util.LOGGER.debug("Registered: " + name);
 		Registry.register(Registry.ITEM, new Identifier(util.MODID, name), item);
+	}
+
+	private void registerGem(IGem item, String suffix) {
+		String prefix = "item_";
+		registerItem((Item)item, prefix + item.getType().getName());
+	}
+	private void registerTool(ToolItem item, String suffix) {
+		String prefix = "item_";
+		registerItem(item, prefix + ((MaterialGem)item.getMaterial()).getType().getName() + suffix);
 	}
 }

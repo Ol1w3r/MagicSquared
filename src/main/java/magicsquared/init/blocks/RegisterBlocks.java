@@ -2,7 +2,7 @@ package magicsquared.init.blocks;
 
 import magicsquared.util;
 import magicsquared.init.ItemGroups;
-import magicsquared.init.items.GemItem.GEM_TYPES;
+import magicsquared.interfaces.IGem.GEM_TYPES;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -11,22 +11,25 @@ import net.minecraft.util.registry.Registry;
 
 public class RegisterBlocks {
 
-	public static final Block BLOCK_AMETHYST 		= new GemBlock(GEM_TYPES.AMETHYST);
-	public static final Block BLOCK_AZURITE 		= new GemBlock(GEM_TYPES.AZURITE);
-	public static final Block BLOCK_PERIDOT 		= new GemBlock(GEM_TYPES.PERIDOT);
-	public static final Block BLOCK_PHOSPHOPHYLLITE	= new GemBlock(GEM_TYPES.PHOSPHOPHYLLITE);
-	public static final Block BLOCK_RUBY			= new GemBlock(GEM_TYPES.RUBY);
-	public static final Block BLOCK_SAPPHIRE 		= new GemBlock(GEM_TYPES.SAPPHIRE);
+	public static final GemBlock BLOCK_AMETHYST 		= new GemBlock(GEM_TYPES.AMETHYST);
+	public static final GemBlock BLOCK_AZURITE 			= new GemBlock(GEM_TYPES.AZURITE);
+	public static final GemBlock BLOCK_PERIDOT 			= new GemBlock(GEM_TYPES.PERIDOT);
+	public static final GemBlock BLOCK_PHOSPHOPHYLLITE	= new GemBlock(GEM_TYPES.PHOSPHOPHYLLITE);
+	public static final GemBlock BLOCK_RUBY				= new GemBlock(GEM_TYPES.RUBY);
+	public static final GemBlock BLOCK_SAPPHIRE 		= new GemBlock(GEM_TYPES.SAPPHIRE);
 	
 	public RegisterBlocks() {
-
+		
+		String prefix = "block_";
+		
 		util.LOGGER.debug("START REGISTER ITEMS");
-		registerBlock(BLOCK_AMETHYST, 			"block_amethyst");
-		registerBlock(BLOCK_AZURITE, 			"block_azurite");
-		registerBlock(BLOCK_PERIDOT, 			"block_peridot");
-		registerBlock(BLOCK_PHOSPHOPHYLLITE, 	"block_phosphophyllite");
-		registerBlock(BLOCK_RUBY, 				"block_ruby");
-		registerBlock(BLOCK_SAPPHIRE, 			"block_sapphire");
+		
+		registerBlock(BLOCK_AMETHYST, 			prefix + BLOCK_AMETHYST.getType().getName());
+		registerBlock(BLOCK_AZURITE, 			prefix + BLOCK_AZURITE.getType().getName());
+		registerBlock(BLOCK_PERIDOT, 			prefix + BLOCK_PERIDOT.getType().getName());
+		registerBlock(BLOCK_PHOSPHOPHYLLITE, 	prefix + BLOCK_PHOSPHOPHYLLITE.getType().getName());
+		registerBlock(BLOCK_RUBY, 				prefix + BLOCK_RUBY.getType().getName());
+		registerBlock(BLOCK_SAPPHIRE, 			prefix + BLOCK_SAPPHIRE.getType().getName());
 		
 	}
 	

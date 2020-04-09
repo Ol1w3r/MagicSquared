@@ -5,6 +5,36 @@
   "item.magicsquared.item_phosphophyllite": "Phosphophyllite",  
   "item.magicsquared.item_ruby": "Ruby",
   "item.magicsquared.item_sapphire": "Sapphire",
+
+  "item.magicsquared.item_amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.magicsquared.item_amethyst_axe": "Amethyst Axe",
+  "item.magicsquared.item_amethyst_shovel": "Amethyst Shovel",
+  "item.magicsquared.item_amethyst_sword": "Amethyst Sword",
+  
+  "item.magicsquared.item_azurite_pickaxe": "Azurite Pickaxe",
+  "item.magicsquared.item_azurite_axe": "Azurite Axe",
+  "item.magicsquared.item_azurite_shovel": "Azurite Shovel",
+  "item.magicsquared.item_azurite_sword": "Azurite Sword",
+  
+  "item.magicsquared.item_peridot_pickaxe": "Peridot Pickaxe",
+  "item.magicsquared.item_peridot_axe": "Peridot Axe",
+  "item.magicsquared.item_peridot_shovel": "Peridot Shovel",
+  "item.magicsquared.item_peridot_sword": "Peridot Sword",
+    
+  "item.magicsquared.item_phosphophyllite_pickaxe": "Phosphophyllite Pickaxe",
+  "item.magicsquared.item_phosphophyllite_axe": "Phosphophyllite Axe",
+  "item.magicsquared.item_phosphophyllite_shovel": "Phosphophyllite Shovel",
+  "item.magicsquared.item_phosphophyllite_sword": "Phosphophyllite Sword",
+  
+  "item.magicsquared.item_ruby_pickaxe": "Ruby Pickaxe",
+  "item.magicsquared.item_ruby_axe": "Ruby Axe",
+  "item.magicsquared.item_ruby_shovel": "Ruby Shovel",
+  "item.magicsquared.item_ruby_sword": "Ruby Sword",
+  
+  "item.magicsquared.item_sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.magicsquared.item_sapphire_axe": "Sapphire Axe",
+  "item.magicsquared.item_sapphire_shovel": "Sapphire Shovel",
+  "item.magicsquared.item_sapphire_sword": "Sapphire Sword",
   
   "block.magicsquared.block_amethyst": "Block of Amethyst",
   "block.magicsquared.block_azurite": "Block of Azurite",
@@ -13,5 +43,6 @@
   "block.magicsquared.block_ruby": "Block of Ruby",
   "block.magicsquared.block_sapphire": "Block of Sapphire",
 
-  "itemGroup.magicsquared.general": "Magic Squared"
+  "itemGroup.magicsquared.general": "Magic Squared General",
+  "itemGroup.magicsquared.tools": "Magic Squared Tools"
 }
