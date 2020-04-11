@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 
 public class GemItem extends Item implements IGem {
 
-	private GEM_TYPES type;
+	private GEM_TYPE type;
 	
-	public GemItem(GEM_TYPES type) {
+	public GemItem(GEM_TYPE type) {
 		
 		super(new Item.Settings().group(ItemGroups.GENERAL));
 		
@@ -16,7 +16,7 @@ public class GemItem extends Item implements IGem {
 	}
 
 	@Override
-	public GEM_TYPES getType() {
+	public GEM_TYPE getType() {
 		return type;
 	}
 }

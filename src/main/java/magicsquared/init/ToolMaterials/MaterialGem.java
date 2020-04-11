@@ -7,30 +7,16 @@ import net.minecraft.recipe.Ingredient;
 
 public class MaterialGem implements ToolMaterial, IGem {
 
-	private GEM_TYPES type;
+	private GEM_TYPE type;
 	
-	public MaterialGem(GEM_TYPES type) {
+	public MaterialGem(GEM_TYPE type) {
 		this.type = type;
 	}
 
 	@Override
 	public int getDurability() {
 
-		switch(type) {
-		
-		case AZURITE:
-		case PHOSPHOPHYLLITE:
-			return 546;
-		case AMETHYST:
-			return 1092;
-		case PERIDOT:
-			return 1014;
-		case RUBY:
-		case SAPPHIRE:
-			return 1404;
-		default:
-			return 1561;
-		}
+		return (int)(type.getHardness() * 156F);
 	}
 
 	@Override
@@ -74,36 +60,18 @@ public class MaterialGem implements ToolMaterial, IGem {
 	@Override
 	public int getMiningLevel() {
 
-		switch(type) {
-		
-		case AZURITE:
-		case PHOSPHOPHYLLITE:
-			return 1;
-		case RUBY:
-		case SAPPHIRE:
-			return 3;
-		case AMETHYST:
-		case PERIDOT:
-		default:
-			return 2;
-		}
+		float h = type.getHardness();
+
+		return h >= 8 ? 3 : 
+			(h > 6 ? 2 : 
+			(h > 4 ? 1 : 
+					 0));
 	}
 
 	@Override
 	public int getEnchantability() {
 
-		switch(type) {
-		
-		case AZURITE:
-		case AMETHYST:
-		case PERIDOT:
-		case PHOSPHOPHYLLITE:
-		case RUBY:
-		case SAPPHIRE:
-			return 30;
-		default:
-			return 10;
-		}
+		return 30;
 	}
 
 	@Override
@@ -128,7 +96,7 @@ public class MaterialGem implements ToolMaterial, IGem {
 	}
 
 	@Override
-	public GEM_TYPES getType() {
+	public GEM_TYPE getType() {
 		return type;
 	}
 
