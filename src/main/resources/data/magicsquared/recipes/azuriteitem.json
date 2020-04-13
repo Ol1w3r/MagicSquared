@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "magicsquared:block_azurite"
+    }
+  ],
+  "result": {
+    "item": "magicsquared:item_azurite",
+    "count": 9
+  }
+}

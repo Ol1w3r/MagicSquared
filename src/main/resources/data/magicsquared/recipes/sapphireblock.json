@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "magicsquared:item_sapphire"
+    }
+  },
+  "result": {
+    "item": "magicsquared:block_sapphire"
+  }
+}

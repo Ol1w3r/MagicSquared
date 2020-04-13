@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"## ",
+		"#- ",
+		" - "
+	],
+	"key": {
+		"#": {
+			"item": "magicsquared:item_sapphire"
+		},
+		"-": {
+			"item": "magicsquared:item_tool_rod"
+		}
+	},
+	"result": {
+		"item": "magicsquared:item_sapphire_axe",
+		"count": 1
+	}
+}

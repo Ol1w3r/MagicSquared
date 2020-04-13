@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		" - ",
+		" - "
+	],
+	"key": {
+		"#": {
+			"item": "magicsquared:item_ruby"
+		},
+		"-": {
+			"item": "magicsquared:item_tool_rod"
+		}
+	},
+	"result": {
+		"item": "magicsquared:item_ruby_pickaxe",
+		"count": 1
+	}
+}
