@@ -76,23 +76,8 @@ public class MaterialGem implements ToolMaterial, IGem {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		switch(type) {
-		
-		case AZURITE:
-			return Ingredient.ofItems(RegisterItems.ITEM_AZURITE);
-		case AMETHYST:
-			return Ingredient.ofItems(RegisterItems.ITEM_AMETHYST);
-		case PERIDOT:
-			return Ingredient.ofItems(RegisterItems.ITEM_PERIDOT);
-		case PHOSPHOPHYLLITE:
-			return Ingredient.ofItems(RegisterItems.ITEM_PHOSPHOPHYLLITE);
-		case RUBY:
-			return Ingredient.ofItems(RegisterItems.ITEM_RUBY);
-		case SAPPHIRE:
-			return Ingredient.ofItems(RegisterItems.ITEM_SAPPHIRE);
-		default:
-			return null;
-		}
+
+		return Ingredient.ofItems(RegisterItems.gemItemMap.get(type.getName()));
 	}
 
 	@Override
