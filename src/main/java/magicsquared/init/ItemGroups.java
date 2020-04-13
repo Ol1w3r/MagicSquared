@@ -1,56 +1,38 @@
 package magicsquared.init;
 
+import java.util.Map;
+
 import magicsquared.util;
 import magicsquared.init.items.RegisterItems;
+import magicsquared.interfaces.IGem.GEM_TYPE;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ItemGroups {
-
+	
+	private static final Map<String, Item> map = RegisterItems.gemToolMap;
+	
 	public static final ItemGroup GENERAL = FabricItemGroupBuilder.build(
 			new Identifier(util.MODID, "general"),
-			() -> new ItemStack(RegisterItems.ITEM_AMETHYST));
+			() -> new ItemStack(RegisterItems.gemItemMap.get(GEM_TYPE.AMETHYST.getName())));
 	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
 			new Identifier(util.MODID, "tools"))
-			.icon(() -> new ItemStack(RegisterItems.ITEM_AMETHYST_PICKAXE))
+			.icon(() -> new ItemStack(map.get(GEM_TYPE.AMETHYST.getName() + "_pickaxe")))
 			.appendItems(stacks ->
 			{
-				stacks.add(new ItemStack(RegisterItems.ITEM_AMETHYST_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AMETHYST_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AMETHYST_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AMETHYST_SWORD));
-				
-				stacks.add(new ItemStack(RegisterItems.ITEM_AZURITE_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AZURITE_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AZURITE_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_AZURITE_SWORD));
-				
-				stacks.add(ItemStack.EMPTY);
-
-				stacks.add(new ItemStack(RegisterItems.ITEM_PERIDOT_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PERIDOT_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PERIDOT_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PERIDOT_SWORD));
-				
-				stacks.add(new ItemStack(RegisterItems.ITEM_PHOSPHOPHYLLITE_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PHOSPHOPHYLLITE_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PHOSPHOPHYLLITE_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_PHOSPHOPHYLLITE_SWORD));
-
-				stacks.add(ItemStack.EMPTY);
-
-				stacks.add(new ItemStack(RegisterItems.ITEM_RUBY_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_RUBY_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_RUBY_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_RUBY_SWORD));
-
-				stacks.add(new ItemStack(RegisterItems.ITEM_SAPPHIRE_AXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_SAPPHIRE_PICKAXE));
-				stacks.add(new ItemStack(RegisterItems.ITEM_SAPPHIRE_SHOVEL));
-				stacks.add(new ItemStack(RegisterItems.ITEM_SAPPHIRE_SWORD));
-				
+				int i = 0;
+				for(GEM_TYPE type: GEM_TYPE.values()) {
+					map.forEach((name, item) -> {
+						if(name.contains(type.getName()))
+							stacks.add(new ItemStack(item));
+					});
+					i++;
+					if(i % 2 == 0)
+						stacks.add(ItemStack.EMPTY);
+				}
 			})
 			.build();
 	
