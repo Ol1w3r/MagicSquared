@@ -15,6 +15,7 @@ import net.minecraft.util.registry.Registry;
 public class RegisterBlocks {
 
 	String prefix = "block_";
+	
 	public static final Map<String, Block> blockMap = new HashMap<>();
 	
 	public RegisterBlocks() {

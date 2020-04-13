@@ -31,6 +31,9 @@ public class RegisterItems {
 		
 		registerTools();
 		
+		registerItemInMap("obsidian_shard", new BasicItem(), basicItemMap);
+		registerItemInMap("tool_rod", new BasicItem(), basicItemMap);
+		
 	}
 	
 	private void registerItemInMap(String name, Item item, Map<String, Item> map) {
