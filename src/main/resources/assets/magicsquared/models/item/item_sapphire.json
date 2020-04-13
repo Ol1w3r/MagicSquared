@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "magicsquared:items/sapphire"
+		"layer0": "magicsquared:items/item_sapphire"
 	}
 }
