@@ -23,6 +23,9 @@ public class RegisterBlocks {
 		util.LOGGER.debug("START REGISTER BLOCKS");
 		
 		registerGemBlocks();
+		for(int i = 1; i < 4; i++) {
+			blockMap.put("obsidian_layers_" + i, new ObsidianLayers(i));
+		}
 		
 		blockMap.forEach((name, block) ->
 		{
