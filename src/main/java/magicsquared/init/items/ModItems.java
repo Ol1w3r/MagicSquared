@@ -15,7 +15,7 @@ import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class RegisterItems {
+public class ModItems {
 
 	public static final Map<String, Item> gemItemMap = new HashMap<>();
 	
@@ -23,7 +23,7 @@ public class RegisterItems {
 	
 	public static final Map<String, Item> basicItemMap = new HashMap<>();
 	
-	public RegisterItems() { 
+	public ModItems() { 
 		
 		util.LOGGER.debug("START REGISTER ITEMS");
 		

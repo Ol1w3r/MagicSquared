@@ -3,7 +3,7 @@ package magicsquared.init;
 import java.util.Map;
 
 import magicsquared.util;
-import magicsquared.init.items.RegisterItems;
+import magicsquared.init.items.ModItems;
 import magicsquared.interfaces.IGem.GEM_TYPE;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
@@ -13,11 +13,11 @@ import net.minecraft.util.Identifier;
 
 public class ItemGroups {
 	
-	private static final Map<String, Item> map = RegisterItems.gemToolMap;
+	private static final Map<String, Item> map = ModItems.gemToolMap;
 	
 	public static final ItemGroup GENERAL = FabricItemGroupBuilder.build(
 			new Identifier(util.MODID, "general"),
-			() -> new ItemStack(RegisterItems.gemItemMap.get(GEM_TYPE.AMETHYST.getName())));
+			() -> new ItemStack(ModItems.gemItemMap.get(GEM_TYPE.AMETHYST.getName())));
 	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
 			new Identifier(util.MODID, "tools"))
 			.icon(() -> new ItemStack(map.get(GEM_TYPE.AMETHYST.getName() + "_pickaxe")))

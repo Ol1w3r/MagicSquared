@@ -12,13 +12,13 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class RegisterBlocks {
+public class ModBlocks {
 
 	String prefix = "block_";
 	
 	public static final Map<String, Block> blockMap = new HashMap<>();
 	
-	public RegisterBlocks() {
+	public ModBlocks() {
 		
 		util.LOGGER.debug("START REGISTER BLOCKS");
 		
@@ -38,6 +38,7 @@ public class RegisterBlocks {
 	private void registerGemBlocks() {
 		for(GEM_TYPE type: GEM_TYPE.values()) {
 			blockMap.put(type.getName(), new GemBlock(type));
+			blockMap.put(type.getName() + "_ore", new GemBlock(type, true));
 		}
 	}
 	

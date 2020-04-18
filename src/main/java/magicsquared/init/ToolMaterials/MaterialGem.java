@@ -1,6 +1,6 @@
 package magicsquared.init.ToolMaterials;
 
-import magicsquared.init.items.RegisterItems;
+import magicsquared.init.items.ModItems;
 import magicsquared.interfaces.IGem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -77,7 +77,7 @@ public class MaterialGem implements ToolMaterial, IGem {
 	@Override
 	public Ingredient getRepairIngredient() {
 
-		return Ingredient.ofItems(RegisterItems.gemItemMap.get(type.getName()));
+		return Ingredient.ofItems(ModItems.gemItemMap.get(type.getName()));
 	}
 
 	@Override

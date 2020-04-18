@@ -2,7 +2,7 @@ package magicsquared.init.items;
 
 import java.util.Random;
 
-import magicsquared.init.blocks.RegisterBlocks;
+import magicsquared.init.blocks.ModBlocks;
 import magicsquared.interfaces.IGem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -46,23 +46,23 @@ public class GemItem extends BasicItem implements IGem {
 			
 			if (b == Blocks.OBSIDIAN) {
 				w.breakBlock(pos, false);
-				w.setBlockState(pos, RegisterBlocks.blockMap.get("obsidian_layers_3").getDefaultState());
+				w.setBlockState(pos, ModBlocks.blockMap.get("obsidian_layers_3").getDefaultState());
 
 				drop(w, x, y, z);
 			}
-			else if (b == RegisterBlocks.blockMap.get("obsidian_layers_3")) {
+			else if (b == ModBlocks.blockMap.get("obsidian_layers_3")) {
 				w.breakBlock(pos, false);
-				w.setBlockState(pos, RegisterBlocks.blockMap.get("obsidian_layers_2").getDefaultState());
+				w.setBlockState(pos, ModBlocks.blockMap.get("obsidian_layers_2").getDefaultState());
 				
 				drop(w, x, y, z);
 			}
-			else if (b == RegisterBlocks.blockMap.get("obsidian_layers_2")) {
+			else if (b == ModBlocks.blockMap.get("obsidian_layers_2")) {
 				w.breakBlock(pos, false);
-				w.setBlockState(pos, RegisterBlocks.blockMap.get("obsidian_layers_1").getDefaultState());
+				w.setBlockState(pos, ModBlocks.blockMap.get("obsidian_layers_1").getDefaultState());
 				
 				drop(w, x, y, z);
 			}
-			else if (b == RegisterBlocks.blockMap.get("obsidian_layers_1")) {
+			else if (b == ModBlocks.blockMap.get("obsidian_layers_1")) {
 				w.breakBlock(pos, false);
 				
 				drop(w, x, y, z);
@@ -76,7 +76,7 @@ public class GemItem extends BasicItem implements IGem {
 		Random random = new Random();
 		int i = random.nextInt(5);
 
-		ItemEntity itemEntity = new ItemEntity(w, x, y, z, new ItemStack(RegisterItems.basicItemMap.get("obsidian_shard"), i == 4 ? 2 : 1));
+		ItemEntity itemEntity = new ItemEntity(w, x, y, z, new ItemStack(ModItems.basicItemMap.get("obsidian_shard"), i == 4 ? 2 : 1));
 		
 		switch(i) {
 		case 0:

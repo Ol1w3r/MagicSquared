@@ -1,0 +1,6 @@
+copy block_amethyst.json block_amethyst_ore.json
+copy block_azurite.json block_azurite_ore.json
+copy block_peridot.json block_peridot_ore.json
+copy block_phosphophyllite.json block_phosphophyllite_ore.json
+copy block_ruby.json block_ruby_ore.json
+copy block_sapphire.json block_sapphire_ore.json
