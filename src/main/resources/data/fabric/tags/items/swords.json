@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "magicsquared:item_amethyst_sword",
+    "magicsquared:item_azurite_sword",
+    "magicsquared:item_peridot_sword",
+    "magicsquared:item_phosphophyllite_sword",
+    "magicsquared:item_ruby_sword",
+    "magicsquared:item_sapphire_sword",
+	"magicsquared:item_amber_sword"
+  ]
+}
