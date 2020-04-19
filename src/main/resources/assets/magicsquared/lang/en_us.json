@@ -46,6 +46,17 @@
   "block.magicsquared.block_phosphophyllite": "Block of Phosphophyllite",
   "block.magicsquared.block_ruby": "Block of Ruby",
   "block.magicsquared.block_sapphire": "Block of Sapphire",
+  
+  "block.magicsquared.block_amethyst_ore": "Amethyst Ore",
+  "block.magicsquared.block_azurite_ore": "Azurite Ore",
+  "block.magicsquared.block_peridot_ore": "Peridot Ore",
+  "block.magicsquared.block_phosphophyllite_ore": "Phosphophyllite Ore",
+  "block.magicsquared.block_ruby_ore": "Ruby Ore",
+  "block.magicsquared.block_sapphire_ore": "Sapphire Ore",
+
+  "block.magicsquared.block_obsidian_layers_1": "1/4 Obsidian",
+  "block.magicsquared.block_obsidian_layers_2": "1/2 Obsidian",
+  "block.magicsquared.block_obsidian_layers_3": "3/4 Obsidian",
 
   "itemGroup.magicsquared.general": "Magic Squared General",
   "itemGroup.magicsquared.tools": "Magic Squared Tools"
