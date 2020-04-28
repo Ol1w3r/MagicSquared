@@ -2,6 +2,7 @@ package magicsquared;
 
 import magicsquared.init.BiomeHandler;
 import magicsquared.init.blocks.ModBlocks;
+import magicsquared.init.entities.ModEntities;
 import magicsquared.init.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,6 +15,7 @@ public class Main implements ModInitializer {
 		// Proceed with mild caution.
 
 		util.LOGGER.debug("MagicSquared Main initiated");
+		new ModEntities();
 		new ModItems();
 		new ModBlocks();
 		new BiomeHandler();
