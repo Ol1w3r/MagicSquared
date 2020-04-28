@@ -4,13 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 import magicsquared.util;
-import magicsquared.init.ToolMaterials.MaterialGem;
+import magicsquared.init.ItemGroups;
+import magicsquared.init.entities.ModEntities;
 import magicsquared.init.items.tools.AxeBase;
 import magicsquared.init.items.tools.PickaxeBase;
 import magicsquared.init.items.tools.ShovelBase;
 import magicsquared.init.items.tools.SwordBase;
-import magicsquared.interfaces.IGem.GEM_TYPE;
+import magicsquared.init.toolmaterials.MaterialGem;
+import magicsquared.interfaces.IGem.GemType;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -23,13 +26,15 @@ public class ModItems {
 	
 	public static final Map<String, Item> basicItemMap = new HashMap<>();
 	
+	public static final Map<String, Item> spawnEggMap = new HashMap<>();
+	
 	public ModItems() { 
 		
 		util.LOGGER.debug("START REGISTER ITEMS");
 		
-		registerGems();
+		registerGemItems();
+		registerSpawnEggs();
 		
-		registerTools();
 		
 		registerItemInMap("obsidian_shard", new BasicItem(), basicItemMap);
 		registerItemInMap("tool_rod", new BasicItem(), basicItemMap);
@@ -52,13 +57,15 @@ public class ModItems {
 		
 	}
 
-	private void registerGems() {
+	private void registerGemItems() {
 		
 		String name = "";
-		for(GEM_TYPE type: GEM_TYPE.values()) {
+		for(GemType type: GemType.values()) {
 			name = type.getName();
 			registerItemInMap(name, new GemItem(type), gemItemMap);
+			registerItemInMap(name + "_scale", new GemItem(type), gemItemMap);
 		}
+		registerTools();
 	}
 	
 	private void registerTools() {
@@ -72,7 +79,7 @@ public class ModItems {
 		String nameShovel = "";
 		String nameSword = "";		
 		
-		for(GEM_TYPE type: GEM_TYPE.values()) {
+		for(GemType type: GemType.values()) {
 			namePick = type.getName() + pickaxe;
 			nameAxe = type.getName() + axe;
 			nameShovel = type.getName() + shovel;
@@ -94,7 +101,16 @@ public class ModItems {
 	
 	private void registerTool(ToolItem item, String suffix) {
 		
-		String name = ((MaterialGem)item.getMaterial()).getType().getName() + suffix;
+		String name = ((MaterialGem)item.getMaterial()).getGemType().getName() + suffix;
 		registerItem(name, item);
+	}
+	
+	private void registerSpawnEggs() {
+		ModEntities.entityMap.forEach((name, entity) -> {
+			spawnEggMap.put(name + "_spawnegg", new SpawnEggItem(entity, 0xade2aa, 0xd6f4d0, new Item.Settings().group(ItemGroups.GENERAL)));
+		});
+		spawnEggMap.forEach((name, item) -> {
+			registerItem(name, item);
+		});
 	}
 }

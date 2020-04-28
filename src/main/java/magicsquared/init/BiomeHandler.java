@@ -1,7 +1,7 @@
 package magicsquared.init;
 
 import magicsquared.init.blocks.ModBlocks;
-import magicsquared.interfaces.IGem.GEM_TYPE;
+import magicsquared.interfaces.IGem.GemType;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
@@ -21,7 +21,7 @@ public class BiomeHandler {
 	private void addGemOres(Biome biome) {
 		if(biome.getCategory() != Category.THEEND || biome.getCategory() != Category.NETHER)
 		{
-			for(GEM_TYPE type: GEM_TYPE.values()) {
+			for(GemType type: GemType.values()) {
 				biome.addFeature(
 					GenerationStep.Feature.UNDERGROUND_ORES,
 					Feature.ORE.configure(

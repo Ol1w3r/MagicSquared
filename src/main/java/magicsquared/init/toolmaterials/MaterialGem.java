@@ -1,4 +1,4 @@
-package magicsquared.init.ToolMaterials;
+package magicsquared.init.toolmaterials;
 
 import magicsquared.init.items.ModItems;
 import magicsquared.interfaces.IGem;
@@ -7,9 +7,9 @@ import net.minecraft.recipe.Ingredient;
 
 public class MaterialGem implements ToolMaterial, IGem {
 
-	private GEM_TYPE type;
+	private GemType type;
 	
-	public MaterialGem(GEM_TYPE type) {
+	public MaterialGem(GemType type) {
 		this.type = type;
 	}
 
@@ -24,6 +24,10 @@ public class MaterialGem implements ToolMaterial, IGem {
 
 		switch(type) {
 		
+		case AMBER:
+			return 2.0F;
+		case PETALITE:
+			return 8.0F;
 		case AZURITE:
 		case PHOSPHOPHYLLITE:
 			return 5F;
@@ -43,6 +47,10 @@ public class MaterialGem implements ToolMaterial, IGem {
 
 		switch(type) {
 		
+		case AMBER:
+			return 2.0F;
+		case PETALITE:
+			return 4.5F;
 		case AZURITE:
 		case PHOSPHOPHYLLITE:
 			return 6.0F;
@@ -63,9 +71,9 @@ public class MaterialGem implements ToolMaterial, IGem {
 		float h = type.getHardness();
 
 		return h >= 8 ? 3 : 
-			(h > 6 ? 2 : 
-			(h > 4 ? 1 : 
-					 0));
+			   (h > 6 ? 2 : 
+			   (h > 4 ? 1 : 
+					    0));
 	}
 
 	@Override
@@ -81,7 +89,7 @@ public class MaterialGem implements ToolMaterial, IGem {
 	}
 
 	@Override
-	public GEM_TYPE getType() {
+	public GemType getGemType() {
 		return type;
 	}
 

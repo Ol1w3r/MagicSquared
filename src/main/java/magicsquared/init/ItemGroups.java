@@ -4,7 +4,7 @@ import java.util.Map;
 
 import magicsquared.util;
 import magicsquared.init.items.ModItems;
-import magicsquared.interfaces.IGem.GEM_TYPE;
+import magicsquared.interfaces.IGem.GemType;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,18 +17,20 @@ public class ItemGroups {
 	
 	public static final ItemGroup GENERAL = FabricItemGroupBuilder.build(
 			new Identifier(util.MODID, "general"),
-			() -> new ItemStack(ModItems.gemItemMap.get(GEM_TYPE.AMETHYST.getName())));
+			() -> new ItemStack(ModItems.gemItemMap.get(GemType.AMETHYST.getName())));
 	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
 			new Identifier(util.MODID, "tools"))
-			.icon(() -> new ItemStack(map.get(GEM_TYPE.AMETHYST.getName() + "_pickaxe")))
+			.icon(() -> new ItemStack(map.get(GemType.AMETHYST.getName() + "_pickaxe")))
 			.appendItems(stacks ->
 			{
 				int i = 0;
-				for(GEM_TYPE type: GEM_TYPE.values()) {
-					map.forEach((name, item) -> {
-						if(name.contains(type.getName()))
-							stacks.add(new ItemStack(item));
-					});
+				String name = "";
+				for(GemType type: GemType.values()) {
+					name = type.getName();
+					stacks.add(new ItemStack(map.get(name + "_pickaxe")));
+					stacks.add(new ItemStack(map.get(name + "_axe")));
+					stacks.add(new ItemStack(map.get(name + "_shovel")));
+					stacks.add(new ItemStack(map.get(name + "_sword")));
 					i++;
 					if(i % 2 == 0)
 						stacks.add(ItemStack.EMPTY);

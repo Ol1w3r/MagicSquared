@@ -16,9 +16,9 @@ import net.minecraft.world.World;
 
 public class GemItem extends BasicItem implements IGem {
 
-	private GEM_TYPE type;
+	private GemType type;
 	
-	public GemItem(GEM_TYPE type) {
+	public GemItem(GemType type) {
 		
 		super();
 		
@@ -26,7 +26,7 @@ public class GemItem extends BasicItem implements IGem {
 	}
 
 	@Override
-	public GEM_TYPE getType() {
+	public GemType getGemType() {
 		return type;
 	}
 	

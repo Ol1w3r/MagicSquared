@@ -5,7 +5,7 @@ import java.util.Map;
 
 import magicsquared.util;
 import magicsquared.init.ItemGroups;
-import magicsquared.interfaces.IGem.GEM_TYPE;
+import magicsquared.interfaces.IGem.GemType;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -36,7 +36,7 @@ public class ModBlocks {
 	}
 	
 	private void registerGemBlocks() {
-		for(GEM_TYPE type: GEM_TYPE.values()) {
+		for(GemType type: GemType.values()) {
 			blockMap.put(type.getName(), new GemBlock(type));
 			blockMap.put(type.getName() + "_ore", new GemBlock(type, true));
 		}

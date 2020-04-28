@@ -8,24 +8,24 @@ import net.minecraft.block.Material;
 
 public class GemBlock extends Block implements IGem {
 	
-	private GEM_TYPE type;
+	private GemType type;
 	
-	public GemBlock(GEM_TYPE type) {
+	public GemBlock(GemType type) {
 		super(getSettingsFromType(type, false));
 		this.type = type;
 	}
 
-	public GemBlock(GEM_TYPE type, boolean isOre) {
+	public GemBlock(GemType type, boolean isOre) {
 		super(getSettingsFromType(type, isOre));
 		this.type = type;
 	}
 	
 	@Override
-	public GEM_TYPE getType() {
+	public GemType getGemType() {
 		return type;
 	}
 	
-	public static Settings getSettingsFromType(GEM_TYPE type, boolean isOre) {
+	public static Settings getSettingsFromType(GemType type, boolean isOre) {
 		
 		
 		if(isOre) {

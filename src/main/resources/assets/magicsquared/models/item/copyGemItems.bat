@@ -1,0 +1,8 @@
+copy item_amethyst.json item_petalite.json
+copy item_amethyst_scale.json item_petalite_scale.json
+copy item_amethyst_pickaxe.json item_petalite_pickaxe.json
+copy item_amethyst_axe.json item_petalite_axe.json
+copy item_amethyst_shovel.json item_petalite_shovel.json
+copy item_amethyst_sword.json item_petalite_sword.json
+copy block_amethyst.json block_petalite.json
+copy block_amethyst_ore.json block_petalite_ore.json
