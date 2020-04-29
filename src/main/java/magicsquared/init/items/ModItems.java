@@ -106,9 +106,11 @@ public class ModItems {
 	}
 	
 	private void registerSpawnEggs() {
-		ModEntities.entityMap.forEach((name, entity) -> {
-			spawnEggMap.put(name + "_spawnegg", new SpawnEggItem(entity, 0xade2aa, 0xd6f4d0, new Item.Settings().group(ItemGroups.GENERAL)));
-		});
+		for(GemType type: GemType.values()) {
+			spawnEggMap.put("dragon_" + type.getName() + "_spawn_egg", 
+					new SpawnEggItem(ModEntities.entityMap.get("dragon_" + type.getName()), 
+							type.colour1(), type.colour2(), new Item.Settings().group(ItemGroups.GENERAL)));
+		}
 		spawnEggMap.forEach((name, item) -> {
 			registerItem(name, item);
 		});

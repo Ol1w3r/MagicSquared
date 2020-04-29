@@ -46,71 +46,71 @@ public class DragonEntityModel<T extends Entity> extends AnimalModel<T> {
 	      this.head.addCuboid(-2.0F, 18.0F, -5.0F, 4.0F, 3.0F, 3.0F);
 		      
 	   
-	      this.rEar = new ModelPart(this, 0, 0);
+	      this.rEar = new ModelPart(this, 0, 6);
 	      this.rEar.addCuboid(-2.0F, 17.0F, -3.0F, 1.0F, 2.0F, 2.0F);
 	      
-	      this.lEar = new ModelPart(this, 0, 0);
+	      this.lEar = new ModelPart(this, 0, 6);
 	      this.lEar.addCuboid(1.0F, 17.0F, -3.0F, 1.0F, 2.0F, 2.0F);
 	      
-	      this.snute = new ModelPart(this, 0, 0);
+	      this.snute = new ModelPart(this, 0, 10);
 	      this.snute.addCuboid(-1.0F, 20.0F, -6.0F, 2.0F, 1.0F, 1.0F);
 	      
 	      
-	      this.body = new ModelPart(this, 0, 0);
+	      this.body = new ModelPart(this, 0, 6);
 	      this.body.addCuboid(-2.0F, 20.0F, -3.0F, 4.0F, 3.0F, 7.0F);
 	      
 
-	      this.frFoot = new ModelPart(this, 0, 0);
+	      this.frFoot = new ModelPart(this, 0, 16);
 	      this.frFoot.addCuboid(-3.0F, 22.0F, -4.0F, 2.0F, 2.0F, 2.0F);
 	      
-	      this.frClaw = new ModelPart(this, 0, 0);
+	      this.frClaw = new ModelPart(this, 8, 16);
 	      this.frClaw.addCuboid(-3.0F, 23.0F, -5.0F, 2.0F, 1.0F, 1.0F);
 	      
 
-	      this.flFoot = new ModelPart(this, 0, 0);
+	      this.flFoot = new ModelPart(this, 0, 16);
 	      this.flFoot.addCuboid(1.0F, 22.0F, -4.0F, 2.0F, 2.0F, 2.0F);
 
-	      this.flClaw = new ModelPart(this, 0, 0);
+	      this.flClaw = new ModelPart(this, 8, 16);
 	      this.flClaw.addCuboid(1.0F, 23.0F, -5.0F, 2.0F, 1.0F, 1.0F);
 	      
 	      
-	      this.brFoot = new ModelPart(this, 0, 0);
+	      this.brFoot = new ModelPart(this, 0, 16);
 	      this.brFoot.addCuboid(-3.0F, 22.0F, 2.0F, 2.0F, 2.0F, 2.0F);
 	      
-	      this.blFoot = new ModelPart(this, 0, 0);
+	      this.blFoot = new ModelPart(this, 0, 16);
 	      this.blFoot.addCuboid(1.0F, 22.0F, 2.0F, 2.0F, 2.0F, 2.0F);
 	      
 	      
-	      this.rWing1 = new ModelPart(this, 0, 0);
-	      this.rWing1.addCuboid(-3.0F, 19.0F, -1.0F, 1.0F, 3.0F, 2.0F);
+	      this.rWing1 = new ModelPart(this, 14, 0);
+	      this.rWing1.addCuboid(-3.0F, 19.0F, 0.0F, 1.0F, 3.0F, 2.0F);
 	      this.rWing1.setPivot(0.0F, 0.0F, -1.0F);
 	      
-	      this.rWing2 = new ModelPart(this, 0, 0);
-	      this.rWing2.addCuboid(-2.0F, 19.0F, -1.0F, 1.0F, 1.0F, 2.0F);
+	      this.rWing2 = new ModelPart(this, 15, 5);
+	      this.rWing2.addCuboid(-2.0F, 19.0F, 0.0F, 1.0F, 1.0F, 2.0F);
 	      this.rWing2.setPivot(0.0F, 0.0F, -1.0F);
 	      
-	      this.rWing3 = new ModelPart(this, 0, 0);
-	      this.rWing3.addCuboid(-3.0F, 19.0F, 1.0F, 1.0F, 2.0F, 1.0F);
+	      this.rWing3 = new ModelPart(this, 15, 8);
+	      this.rWing3.addCuboid(-3.0F, 19.0F, 2.0F, 1.0F, 2.0F, 1.0F);
 	      this.rWing3.setPivot(0.0F, 0.0F, -1.0F);
 	      
 	      
-	      this.lWing1 = new ModelPart(this, 0, 0);
-	      this.lWing1.addCuboid(2.0F, 19.0F, -1.0F, 1.0F, 3.0F, 2.0F);
+	      this.lWing1 = new ModelPart(this, 14, 0);
+	      this.lWing1.addCuboid(2.0F, 19.0F, 0.0F, 1.0F, 3.0F, 2.0F);
 	      this.lWing1.setPivot(0.0F, 0.0F, -1.0F);
 
-	      this.lWing2 = new ModelPart(this, 0, 0);
-	      this.lWing2.addCuboid(1.0F, 19.0F, -1.0F, 1.0F, 1.0F, 2.0F);
+	      this.lWing2 = new ModelPart(this, 15, 5);
+	      this.lWing2.addCuboid(1.0F, 19.0F, 0.0F, 1.0F, 1.0F, 2.0F);
 	      this.lWing2.setPivot(0.0F, 0.0F, -1.0F);
 	      
-	      this.lWing3 = new ModelPart(this, 0, 0);
-	      this.lWing3.addCuboid(2.0F, 19.0F, 1.0F, 1.0F, 2.0F, 1.0F);
+	      this.lWing3 = new ModelPart(this, 15, 8);
+	      this.lWing3.addCuboid(2.0F, 19.0F, 2.0F, 1.0F, 2.0F, 1.0F);
 	      this.lWing3.setPivot(0.0F, 0.0F, -1.0F);
 
 	      
-	      this.tail1 = new ModelPart(this, 0, 0);
+	      this.tail1 = new ModelPart(this, 0, 18);
 	      this.tail1.addCuboid(0.0F, 20.0F, 4.0F, 0.0F, 1.0F, 3.0F);
 	      
-	      this.tail2 = new ModelPart(this, 0, 0);
+	      this.tail2 = new ModelPart(this, 0, 19);
 	      this.tail2.addCuboid(0.0F, 18.0F, 7.0F, 0.0F, 2.0F, 1.0F);
 	   }
 
