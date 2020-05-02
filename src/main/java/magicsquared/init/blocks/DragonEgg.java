@@ -1,6 +1,7 @@
 package magicsquared.init.blocks;
 
 import java.util.Random;
+import java.util.UUID;
 
 import org.apache.logging.log4j.Level;
 
@@ -35,7 +36,7 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 	private GemType type;
 	
 	public DragonEgg(GemType type) {
-		super(FabricBlockSettings.of(Material.STONE).build());
+		super(FabricBlockSettings.of(Material.STONE).ticksRandomly().build());
 		this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()));
 		this.type = type;
 		
@@ -44,7 +45,7 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 	@Override
 	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		util.LOGGER.log(Level.WARN, "scheduledTicket: {}", type.getName());
-		if (this.shouldHatchProgress(world) && this.isSand(world, pos)) {
+		if (this.shouldHatchProgress(world) && this.isOnGem(world, pos)) {
 			int i = (Integer)state.get(HATCH);
 			if (i < 2) {
 				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_CRACK, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
@@ -53,27 +54,34 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 			} else {
 				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_HATCH, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
 				world.removeBlock(pos, false);
-
+				
 				world.playLevelEvent(2001, pos, Block.getRawIdFromState(state));
-				DragonEntity dragonEntity = (DragonEntity)ModEntities.entityMap.get("dragon_amber").create(world);
+				DragonEntity dragonEntity = (DragonEntity)ModEntities.entityMap.get("dragon_" + this.type.getName()).create(world);
 				dragonEntity.refreshPositionAndAngles((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), 0.0F, 0.0F);
-				dragonEntity.setOwnerUuid(((DragonEggBlockEntity)world.getBlockEntity(pos)).getPlacer());
+				DragonEggBlockEntity be = (DragonEggBlockEntity)world.getBlockEntity(pos);
+				if(be != null) {
+					UUID uuid = be.getPlacer();
+					dragonEntity.setOwnerUuid(uuid);
+				}
 				world.spawnEntity(dragonEntity);
 				util.LOGGER.log(Level.WARN, "dragon hatched");
 			}
 		}
 	}
 	
-	private boolean shouldHatchProgress(World world) {
-		float f = world.getSkyAngle(1.0F);
-		if ((double)f < 0.69D && (double)f > 0.65D) {
-			return true;
-		} else {
-			return world.random.nextInt(500) == 0;
-		}
+	private boolean shouldHatchProgress(World world) {			
+			return world.random.nextInt(20) == 0;
 	}
 
-	private boolean isSand(BlockView world, BlockPos pos) {
+	private boolean isOnGem(BlockView world, BlockPos pos) {
+		String name;
+		Block block = world.getBlockState(pos.down()).getBlock();
+		for(GemType type: GemType.values()) {
+			name = type.getName() + "_block";
+			if(block == ModBlocks.blockMap.get(name)) {
+				return true;
+			}
+		}
 		return world.getBlockState(pos.down()).getBlock() == Blocks.SAND;
 	}
 
@@ -94,6 +102,8 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
 		super.onPlaced(world, pos, state, placer, itemStack);
+		if(!world.isClient)
+			System.out.println();
 		if(placer instanceof PlayerEntity)
 			((DragonEggBlockEntity)world.getBlockEntity(pos)).SetOwner(placer.getUuid());
 	}

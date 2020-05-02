@@ -1,5 +1,8 @@
 package magicsquared.init.entities;
 
+import org.apache.logging.log4j.Level;
+
+import magicsquared.util;
 import magicsquared.init.items.ModItems;
 import magicsquared.interfaces.IGem;
 import net.minecraft.entity.EntityType;
@@ -57,6 +60,9 @@ public class DragonEntity extends TameableEntity implements IGem {
 	
 	public void tickMovement() {
 	      super.tickMovement();
+	      
+	      if(this.getOwner() != null)
+	    	  util.LOGGER.log(Level.WARN, "Owner: {}", this.getOwner().getName());
 	      this.field_6736 = this.field_6741;
 	      this.field_6738 = this.field_6743;
 	      this.field_6743 = (float)((double)this.field_6743 + (double)(this.onGround ? -1 : 4) * 0.3D);
