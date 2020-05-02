@@ -27,16 +27,16 @@ public class ObsidianLayers extends Block {
 		return VoxelShapes.cuboid(0f, 0f, 0f, 1f, (float)layers * 0.25f, 1.0f);
 	 }
 	
-	@Override
-	public boolean canReplace(BlockState state, ItemPlacementContext ctx) {
-		if(ctx.getStack().getItem() == ModBlocks.blockMap.get("block_obsidian_layers_1").asItem()) {
-			util.LOGGER.error("1");
-			BlockPos pos = ctx.getBlockPos();
-			if(state.getBlock() == ModBlocks.blockMap.get("block_obsidian_layers_3")) {
-				
-				ctx.getWorld().setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
-			}
-		}
-		return super.canReplace(state, ctx);
-	}
+//	@Override
+//	public boolean canReplace(BlockState state, ItemPlacementContext ctx) {
+//		if(ctx.getStack().getItem() == ModBlocks.blockMap.get("block_obsidian_layers_1").asItem()) {
+//			util.LOGGER.error("1");
+//			BlockPos pos = ctx.getBlockPos();
+//			if(state.getBlock() == ModBlocks.blockMap.get("block_obsidian_layers_3")) {
+//				
+//				ctx.getWorld().setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
+//			}
+//		}
+//		return super.canReplace(state, ctx);
+//	}
 }

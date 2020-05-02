@@ -36,9 +36,12 @@ public class ModBlocks {
 	}
 	
 	private void registerGemBlocks() {
+		String name;
 		for(GemType type: GemType.values()) {
-			blockMap.put(type.getName(), new GemBlock(type));
-			blockMap.put(type.getName() + "_ore", new GemBlock(type, true));
+			name = type.getName();
+			blockMap.put(name, new GemBlock(type));
+			blockMap.put(name + "_ore", new GemBlock(type, true));
+			blockMap.put(name + "_egg", new DragonEgg(type));
 		}
 	}
 	
