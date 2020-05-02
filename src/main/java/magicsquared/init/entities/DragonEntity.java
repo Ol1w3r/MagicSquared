@@ -3,16 +3,22 @@ package magicsquared.init.entities;
 import magicsquared.init.items.ModItems;
 import magicsquared.interfaces.IGem;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.goal.FleeEntityGoal;
+import net.minecraft.entity.ai.goal.LookAroundGoal;
+import net.minecraft.entity.ai.goal.LookAtEntityGoal;
+import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
+import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class DragonEntity extends AnimalEntity implements IGem {
+public class DragonEntity extends TameableEntity implements IGem {
 
 	private GemType type;
     public float field_6741;
@@ -22,7 +28,7 @@ public class DragonEntity extends AnimalEntity implements IGem {
     public float field_6737 = 1.0F;
     public int scaleDropTime;
 	
-    public DragonEntity(EntityType<AnimalEntity> entityType, World world, GemType type) {
+    public DragonEntity(EntityType<? extends TameableEntity> entityType, World world, GemType type) {
 		super(entityType, world);
 		this.type = type;
 	    this.scaleDropTime = this.random.nextInt(6000 * 2) + 6000;
@@ -35,10 +41,10 @@ public class DragonEntity extends AnimalEntity implements IGem {
 	@Override
 	protected void initGoals() {
 		
-//		this.goalSelector.add(0, new FleeEntityGoal<ChickenEntity>(this, ChickenEntity.class, 6.0F, 1.0D, 2.0D));
-//		this.goalSelector.add(1, new WanderAroundFarGoal(this, 1.0D));
-//		this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-//	    this.goalSelector.add(3, new LookAroundGoal(this));
+		this.goalSelector.add(0, new FleeEntityGoal<ChickenEntity>(this, ChickenEntity.class, 6.0F, 1.0D, 2.0D));
+		this.goalSelector.add(1, new WanderAroundFarGoal(this, 1.0D));
+		this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+	    this.goalSelector.add(3, new LookAroundGoal(this));
 	}
 	
 
