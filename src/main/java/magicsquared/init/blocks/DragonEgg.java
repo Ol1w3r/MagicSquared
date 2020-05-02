@@ -45,17 +45,17 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 	@Override
 	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		util.LOGGER.log(Level.WARN, "scheduledTicket: {}", type.getName());
-		if (this.shouldHatchProgress(world) && this.isOnGem(world, pos)) {
-			int i = (Integer)state.get(HATCH);
-			if (i < 2) {
-				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_CRACK, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
-				world.setBlockState(pos, (BlockState)state.with(HATCH, i + 1), 2);
-				util.LOGGER.log(Level.WARN, "hatch: {}", HATCH);
-			} else {
-				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_HATCH, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
-				world.removeBlock(pos, false);
-				
-				world.playLevelEvent(2001, pos, Block.getRawIdFromState(state));
+//		if (this.shouldHatchProgress(world) && this.isOnGem(world, pos)) {
+//			int i = (Integer)state.get(HATCH);
+//			if (i < 2) {
+//				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_CRACK, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
+//				world.setBlockState(pos, (BlockState)state.with(HATCH, i + 1), 2);
+//				util.LOGGER.log(Level.WARN, "hatch: {}", HATCH);
+//			} else {
+//				world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_TURTLE_EGG_HATCH, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
+//				world.removeBlock(pos, false);
+//				
+//				world.playLevelEvent(2001, pos, Block.getRawIdFromState(state));
 				DragonEntity dragonEntity = (DragonEntity)ModEntities.entityMap.get("dragon_" + this.type.getName()).create(world);
 				dragonEntity.refreshPositionAndAngles((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), 0.0F, 0.0F);
 				DragonEggBlockEntity be = (DragonEggBlockEntity)world.getBlockEntity(pos);
@@ -63,10 +63,10 @@ public class DragonEgg extends Block implements BlockEntityProvider, IGem {
 					UUID uuid = be.getPlacer();
 					dragonEntity.setOwnerUuid(uuid);
 				}
-				world.spawnEntity(dragonEntity);
-				util.LOGGER.log(Level.WARN, "dragon hatched");
-			}
-		}
+//				world.spawnEntity(dragonEntity);
+//				util.LOGGER.log(Level.WARN, "dragon hatched");
+//			}
+//		}
 	}
 	
 	private boolean shouldHatchProgress(World world) {			
