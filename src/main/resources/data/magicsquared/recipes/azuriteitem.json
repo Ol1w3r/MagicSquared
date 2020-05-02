@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_azurite"
+      "item": "magicsquared:azurite"
     }
   ],
   "result": {
-    "item": "magicsquared:item_azurite",
+    "item": "magicsquared:azurite",
     "count": 9
   }
 }

@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_azurite"
+			"item": "magicsquared:azurite"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_azurite_pickaxe",
+		"item": "magicsquared:azurite_pickaxe",
 		"count": 1
 	}
 }

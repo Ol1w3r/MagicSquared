@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_phosphophyllite"
+      "item": "magicsquared:phosphophyllite"
     }
   },
   "result": {
-    "item": "magicsquared:block_phosphophyllite"
+    "item": "magicsquared:phosphophyllite"
   }
 }

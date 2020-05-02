@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_amethyst"
+			"item": "magicsquared:amethyst"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_amethyst_shovel",
+		"item": "magicsquared:amethyst_shovel",
 		"count": 1
 	}
 }

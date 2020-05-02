@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_ruby"
+      "item": "magicsquared:ruby"
     }
   },
   "result": {
-    "item": "magicsquared:block_ruby"
+    "item": "magicsquared:ruby"
   }
 }

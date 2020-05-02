@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_peridot"
+      "item": "magicsquared:peridot"
     }
   ],
   "result": {
-    "item": "magicsquared:item_peridot",
+    "item": "magicsquared:peridot",
     "count": 9
   }
 }

@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_ruby"
+			"item": "magicsquared:ruby"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_ruby_pickaxe",
+		"item": "magicsquared:ruby_pickaxe",
 		"count": 1
 	}
 }

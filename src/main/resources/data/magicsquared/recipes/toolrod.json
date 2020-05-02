@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_obsidian_shard"
+			"item": "magicsquared:obsidian_shard"
 		},
 		"-": {
 			"item": "minecraft:iron_ingot"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_tool_rod",
+		"item": "magicsquared:tool_rod",
 		"count": 1
 	}
 }

@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_sapphire"
+			"item": "magicsquared:sapphire"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_sapphire_shovel",
+		"item": "magicsquared:sapphire_shovel",
 		"count": 1
 	}
 }

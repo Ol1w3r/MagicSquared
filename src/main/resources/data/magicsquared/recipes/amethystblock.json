@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_amethyst"
+      "item": "magicsquared:amethyst"
     }
   },
   "result": {
-    "item": "magicsquared:block_amethyst"
+    "item": "magicsquared:amethyst"
   }
 }

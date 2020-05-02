@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "magicsquared:item_amethyst_pickaxe",
-    "magicsquared:item_azurite_pickaxe",
-    "magicsquared:item_peridot_pickaxe",
-    "magicsquared:item_phosphophyllite_pickaxe",
-    "magicsquared:item_ruby_pickaxe",
-    "magicsquared:item_sapphire_pickaxe",
-	"magicsquared:item_amber_pickaxe",
-	"magicsquared:item_petalite_pickaxe"
+    "magicsquared:amethyst_pickaxe",
+    "magicsquared:azurite_pickaxe",
+    "magicsquared:peridot_pickaxe",
+    "magicsquared:phosphophyllite_pickaxe",
+    "magicsquared:ruby_pickaxe",
+    "magicsquared:sapphire_pickaxe",
+	"magicsquared:amber_pickaxe",
+	"magicsquared:petalite_pickaxe"
   ]
 }

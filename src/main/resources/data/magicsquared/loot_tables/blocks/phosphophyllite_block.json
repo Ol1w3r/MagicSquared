@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "magicsquared:block_azurite"
+          "name": "magicsquared:phosphophyllite"
         }
       ],
       "conditions": [

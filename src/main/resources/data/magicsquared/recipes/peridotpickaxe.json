@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_peridot"
+			"item": "magicsquared:peridot"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_peridot_pickaxe",
+		"item": "magicsquared:peridot_pickaxe",
 		"count": 1
 	}
 }

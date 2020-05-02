@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_phosphophyllite"
+      "item": "magicsquared:phosphophyllite"
     }
   ],
   "result": {
-    "item": "magicsquared:item_phosphophyllite",
+    "item": "magicsquared:phosphophyllite",
     "count": 9
   }
 }

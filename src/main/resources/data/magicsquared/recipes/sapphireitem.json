@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_sapphire"
+      "item": "magicsquared:sapphire"
     }
   ],
   "result": {
-    "item": "magicsquared:item_sapphire",
+    "item": "magicsquared:sapphire",
     "count": 9
   }
 }

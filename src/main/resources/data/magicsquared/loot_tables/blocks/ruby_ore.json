@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "magicsquared:block_sapphire_ore"
+              "name": "magicsquared:ruby_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "magicsquared:item_sapphire"
+              "name": "magicsquared:ruby"
             }
           ]
         }

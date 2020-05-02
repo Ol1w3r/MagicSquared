@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "magicsquared:item_amethyst_shovel",
-    "magicsquared:item_azurite_shovel",
-    "magicsquared:item_peridot_shovel",
-    "magicsquared:item_phosphophyllite_shovel",
-    "magicsquared:item_ruby_shovel",
-    "magicsquared:item_sapphire_shovel",
-	"magicsquared:item_amber_shovel",
-	"magicsquared:item_petalite_shovel"
+    "magicsquared:amethyst_shovel",
+    "magicsquared:azurite_shovel",
+    "magicsquared:peridot_shovel",
+    "magicsquared:phosphophyllite_shovel",
+    "magicsquared:ruby_shovel",
+    "magicsquared:sapphire_shovel",
+	"magicsquared:amber_shovel",
+	"magicsquared:petalite_shovel"
   ]
 }

@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "magicsquared:item_phosphophyllite"
+			"item": "magicsquared:phosphophyllite"
 		},
 		"-": {
-			"item": "magicsquared:item_tool_rod"
+			"item": "magicsquared:tool_rod"
 		}
 	},
 	"result": {
-		"item": "magicsquared:item_phosphophyllite_sword",
+		"item": "magicsquared:phosphophyllite_sword",
 		"count": 1
 	}
 }

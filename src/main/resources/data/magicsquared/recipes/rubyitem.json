@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_ruby"
+      "item": "magicsquared:ruby"
     }
   ],
   "result": {
-    "item": "magicsquared:item_ruby",
+    "item": "magicsquared:ruby",
     "count": 9
   }
 }

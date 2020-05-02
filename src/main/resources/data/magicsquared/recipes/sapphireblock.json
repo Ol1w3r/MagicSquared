@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_sapphire"
+      "item": "magicsquared:sapphire"
     }
   },
   "result": {
-    "item": "magicsquared:block_sapphire"
+    "item": "magicsquared:sapphire"
   }
 }

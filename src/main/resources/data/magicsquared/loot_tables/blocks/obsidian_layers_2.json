@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "magicsquared:item_obsidian_shard"
+          "name": "magicsquared:obsidian_shard"
         }
       ],
       "conditions": [

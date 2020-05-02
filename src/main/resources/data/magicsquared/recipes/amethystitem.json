@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "magicsquared:block_amethyst"
+      "item": "magicsquared:amethyst"
     }
   ],
   "result": {
-    "item": "magicsquared:item_amethyst",
+    "item": "magicsquared:amethyst",
     "count": 9
   }
 }

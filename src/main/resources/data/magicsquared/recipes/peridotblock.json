@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_peridot"
+      "item": "magicsquared:peridot"
     }
   },
   "result": {
-    "item": "magicsquared:block_peridot"
+    "item": "magicsquared:peridot"
   }
 }

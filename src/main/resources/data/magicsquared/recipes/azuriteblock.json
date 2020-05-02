@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "magicsquared:item_azurite"
+      "item": "magicsquared:azurite"
     }
   },
   "result": {
-    "item": "magicsquared:block_azurite"
+    "item": "magicsquared:azurite"
   }
 }
