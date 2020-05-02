@@ -13,8 +13,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
-
-	String prefix = "block_";
 	
 	public static final Map<String, Block> blockMap = new HashMap<>();
 	
@@ -39,14 +37,13 @@ public class ModBlocks {
 		String name;
 		for(GemType type: GemType.values()) {
 			name = type.getName();
-			blockMap.put(name, new GemBlock(type));
+			blockMap.put(name + "_block", new GemBlock(type));
 			blockMap.put(name + "_ore", new GemBlock(type, true));
 			blockMap.put(name + "_egg", new DragonEgg(type));
 		}
 	}
 	
 	private void registerBlock(Block block, String name) {
-		name = prefix + name;
 		util.LOGGER.debug("Registered: " + name);
 		Registry.register(Registry.BLOCK, new Identifier(util.MODID, name), block);
 		Registry.register(Registry.ITEM, new Identifier(util.MODID, name), new BlockItem(block, new Item.Settings().group(ItemGroups.GENERAL)));

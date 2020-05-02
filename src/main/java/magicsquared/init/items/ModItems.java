@@ -49,11 +49,9 @@ public class ModItems {
 	
 	private void registerItem(String name, Item item) {
 
-		String prefix = "item_";
-		
 		util.LOGGER.debug("Registered: " + name);
 		
-		Registry.register(Registry.ITEM, new Identifier(util.MODID, prefix + name), item);
+		Registry.register(Registry.ITEM, new Identifier(util.MODID, name), item);
 		
 	}
 
