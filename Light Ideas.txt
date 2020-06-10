@@ -1,0 +1,14 @@
+Light Ideas
+Spells
+- Place invisible Light sources
+	- More control over light level with higher level
+- Apply glowing to self or others
+- Self night vision buff
+- Create impassable blocks for undead mobs
+- Delayed self heal 
+
+"Fuel" (Mana, Energy?)
+1. Sea Crystals
+2. Glowstone
+3. Sunlight
+4. Redstone
